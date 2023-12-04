@@ -31,14 +31,19 @@
               
               <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
               <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
+              
               @endguest
 
                {{-- !Solo per utenti autenticati --}}
               @auth
-              <li>
+              <li class="nav-link active">
                 <p href=""> Benvenuto {{Auth::user()->name}}</p>
               </li>
-              <li><form method="POST" action="{{route('logout')}}">@csrf <button type="submit">Logout</button></form></li>
+              <li class="nav-link active"><form method="POST" action="{{route('logout')}}">@csrf <button type="submit">Logout</button></form></li>
+              <li><a class="nav-link active" href="{{route('careers')}}">Lavora con noi!</a></li>
+              @if(Auth::user()->is_admin)
+              <li><a class="nav-link active" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
+              @endif
               @endauth
             </ul>
           </li>
