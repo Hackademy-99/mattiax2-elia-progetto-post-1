@@ -28,7 +28,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-6">
-          <h1 class="text-center"">inserisci articolo</h1>
+          <h1 class="text-center">inserisci articolo</h1>
     </div>
   </div>
 </div>

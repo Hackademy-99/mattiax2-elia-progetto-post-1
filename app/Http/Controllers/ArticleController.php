@@ -20,7 +20,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles=Article::orderBy('created_at','desc')->get();
+        $articles=Article::where('is_accepted',true)->orderBy('created_at','desc')->get();
         return view('Articles.index',compact('articles'));
     }
 
@@ -100,15 +100,18 @@ class ArticleController extends Controller
 
     public function byCategory(Category $category)
     {
-        $articles=$category->articles->sortByDesc('created_at');
+        $articles=$category->articles->sortByDesc('created_at')->filter(function($article){
+            return $article->is_accepted==true;
+        });
         return view('Articles.by-category',compact('category','articles'));
     }
 
      //! Filter by category
 
-     public function byUser(User $user)
+     public function byWriter(User $user)
      {
-         $articles=$user->articles->sortByDesc('created_at');
+         $articles=$user->articles->sortByDesc('created_at')->filter(function($article){
+            return $article->is_accepted==true;});
          return view('Articles.by-user',compact('user','articles'));
      }
 }
