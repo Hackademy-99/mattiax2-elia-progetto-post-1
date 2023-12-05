@@ -1,7 +1,9 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-info text-center text-white">
+    <div class="container-fluid p-3 text-center text-black">
         <div class="row justify-content-center">
-            <h1 class="display-1">Bentornato amministratore!</h1>
+            <h1 class="display-4 tesxt-capitalize">
+                Bentornato Amministratore
+            </h1>
         </div>
     </div>
 

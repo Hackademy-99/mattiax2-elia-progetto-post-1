@@ -1,10 +1,10 @@
 <x-layout>
     
-    <div class="container">
-        <div class="row mb-3">
-            <div class="col-12">
-                <h1>LAVORA CON NOI</h1>
-            </div>
+    <div class="container-fluid p-3 text-center text-black">
+        <div class="row justify-content-center">
+            <h1 class="display-4 tesxt-capitalize">
+                Candidati per un ruolo
+            </h1>
         </div>
     </div>
    
@@ -61,7 +61,7 @@
                             
                         </div>
                         <div>
-                            <button>
+                            <button class="my-5">
                                 Invia la tua candidatura
                             </button>
                         </div>
