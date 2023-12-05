@@ -16,7 +16,7 @@
           {{--! Solo per utenti autenticati --}}
           @auth
           <li class="nav-item">
-            <a class="nav-link" href="{{route('Articles.create')}}">Inserisci articolo</a>
+            <a class="nav-link active" href="{{route('Articles.create')}}">Inserisci articolo</a>
           </li> 
           @endauth
 
