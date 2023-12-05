@@ -2,8 +2,8 @@
 
 namespace App\Http;
 
-use app\Http\Middleware\UserIsAdmin;
-use app\Http\Middleware\UserIsRevisor;
+use App\Http\Middleware\UserIsAdmin;
+use App\Http\Middleware\UserIsRevisor;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
