@@ -8,7 +8,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\PublicController;
-use App\Http\Controllers\ArticleController;
+
 
 class ArticleController extends Controller
 {

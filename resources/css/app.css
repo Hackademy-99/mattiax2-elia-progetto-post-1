@@ -1,1 +1,33 @@
 @import 'bootstrap';
+@import 'navbar.css';
+@import 'cards.css';
+@import 'article.css';
+
+
+:root {
+
+    --main:#A9B4C2;
+    --sec:#1D201F;
+    --acc:#F78154;
+};
+
+.nav-link{
+
+    background-color: #F78154;
+    
+}
+
+body{
+    background-image: url(/public/img/sfondo3.jpg);
+    background-position: center;
+    background-size:100% 100%;
+}
+.titoletto{
+    font-family: 'Playfair Display', serif;
+    text-decoration:underline
+}
+.hr-title{
+    width: 100px;
+    color: black;
+    
+}
