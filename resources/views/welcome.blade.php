@@ -1,7 +1,4 @@
 <x-layout>
-
-
-
 <div class="container ">
     <div class="row d-flex justify-content-around ">
             <div class="col-12 col-md-4 d-flex justify-content-around align-items-center  my-5 flex-column">

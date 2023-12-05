@@ -1,5 +1,9 @@
 <x-layout>
     
+    @if(Session::has('message'))
+    <p class="alert alert-info">{{ Session::get('message') }}</p>
+    @endif
+    
     <div class="container-fluid p-3 text-center text-black">
         <div class="row justify-content-center">
             <h1 class="display-4 tesxt-capitalize">
@@ -36,9 +40,7 @@
                     </div>
                     @endif
 
-                    @if(Session::has('message'))
-                    <p class="alert alert-info">{{ Session::get('message') }}</p>
-                    @endif
+                   
                     
                     
                     <form action="{{route('careers.submit')}}" method="POST">
@@ -46,9 +48,16 @@
                         <div>
                             <label for="role" class="form-label">Per quale ruolo ti stai candidando?</label>
                             <select name="role" id="role" class="form-control">
-                                <option value="admin">Amministratore</option>
-                                <option value="revisor">Revisore</option>
-                                <option value="writer">Redattore</option>
+                                <option 
+                                @if (Auth::user()->is_admin==true)
+                                disabled
+                                @endif value="admin">Amministratore</option>
+                                <option @if (Auth::user()->is_revisor==true)
+                                    disabled
+                                    @endif value="revisor">Revisore</option>
+                                <option @if (Auth::user()->is_writer==true)
+                                    disabled
+                                    @endif value="writer">Redattore</option>
                             </select>
                         </div>
                         <div>
