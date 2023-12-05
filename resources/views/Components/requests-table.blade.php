@@ -13,9 +13,7 @@
         <th scope="row">{{$user->id}}</th>
         <td>{{$user->name}}</td>
         <td>{{$user->email}}</td>
-        <td>
-            <button class="btn btn-info text-white">Attiva {{$role}}</button>
-        </td>
+        
         <td>
             @switch($role)
                 @case('amministratore')

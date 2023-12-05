@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use App\Http\Middleware\UserIsAdmin;
+use App\Http\Middleware\UserIsWriter;
 use App\Http\Middleware\UserIsRevisor;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -68,6 +69,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'admin'=>UserIsAdmin::class,
         'revisor'=>UserIsRevisor::class,
+        'writer'=>UserIsWriter::class,
     ];
 
     // protected $routeMiddleware =[

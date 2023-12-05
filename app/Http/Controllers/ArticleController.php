@@ -108,7 +108,7 @@ class ArticleController extends Controller
 
      //! Filter by category
 
-     public function byUser(User $user)
+     public function byWriter(User $user)
      {
          $articles=$user->articles->sortByDesc('created_at')->filter(function($article){
             return $article->is_accepted==true;});

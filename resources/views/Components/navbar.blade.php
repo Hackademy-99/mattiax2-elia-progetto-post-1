@@ -20,6 +20,7 @@
           </li> 
           @endauth
 
+          {{-- ! utenti guest --}}
           @guest
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -27,7 +28,7 @@
             </a>
             <ul class="dropdown-menu">
 
-              {{-- ! utenti guest --}}
+              
               
               <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
               <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
@@ -43,6 +44,9 @@
               <li><a class="nav-link active" href="{{route('careers')}}">Lavora con noi!</a></li>
               @if(Auth::user()->is_admin)
               <li><a class="nav-link active" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
+              @endif
+              @if (Auth::user()->is_revisor)
+              <li><a class="nav-link active" href="{{route('revisor.dashboard')}}">Dashboard Revisor</a></li>
               @endif
               @endauth
             </ul>

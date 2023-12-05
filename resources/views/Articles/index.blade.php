@@ -18,10 +18,10 @@
                   <p class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</p>
                 
                 <br>
-                    Redatto il: {{$article->created_at->format('d/m/Y')}} da <a href="{{route('Articles.byUser',['user'=>$article->user->id])}}" class="small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center">{{$article->user->name}}</a>
+                    Redatto il: {{$article->created_at->format('d/m/Y')}} da <a href="{{route('Articles.byWriter',['user'=>$article->user->id])}}" class="small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center">{{$article->user->name}}</a>
                     <a href="{{route('Articles.show',compact('article'))}}" class="btn btn-primary d-flex justify-content-around align-items-center text-center my-5">Scopri di più</a>
                     <a href="{{route('Articles.byCategory',['category'=>$article->category->id])}}" class="small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center my-3">Categoria di apparteneza: {{$article->category->name}}</a>
-                    <a href="{{route('Articles.byUser',['user'=>$article->user->id])}}" class="small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center mt-5">{{$article->user->name}}</a>
+                    <a href="{{route('Articles.byWriter',['user'=>$article->user->id])}}" class="small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center mt-5">{{$article->user->name}}</a>
                 
               </div>
               </div>

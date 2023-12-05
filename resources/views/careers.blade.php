@@ -1,10 +1,16 @@
 <x-layout>
     
-    
-    <h1>LAVORA CON NOI</h1>
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-12">
+                <h1>LAVORA CON NOI</h1>
+            </div>
+        </div>
+    </div>
+   
     
     <div class="container">
-        <div class="row">
+        <div class="row mb-3">
             <div class="col-12 col-md-6">
                 <h2>Lavora come amministratore</h2>
                 <p>Cosa farai: Ti occuperai della gestione del sito e dei suoi contenuti nella sua interezza</p>
@@ -28,6 +34,10 @@
                             @endforeach
                         </ul>
                     </div>
+                    @endif
+
+                    @if(Session::has('message'))
+                    <p class="alert alert-info">{{ Session::get('message') }}</p>
                     @endif
                     
                     
