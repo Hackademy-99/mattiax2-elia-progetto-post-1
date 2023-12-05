@@ -1,3 +1,19 @@
 h1{
-    height: 2000px;
+    height: 200px;
+}
+
+
+.btn-logout{
+    border: none;
+    background-color:transparent;
+    color: white;
+    width: 100%;
+    display: flex;
+    text-align: start;
+}
+.btn-logout:hover{
+    border: none;
+    background-color:white;
+    color: rgb(0, 0, 0);
+    
 }

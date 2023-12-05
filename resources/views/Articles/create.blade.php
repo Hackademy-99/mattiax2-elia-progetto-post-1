@@ -33,8 +33,7 @@
   </div>
 </div>
 
-
-      {{-- <div class="mb-3">
+       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Titolo</label>
         <input value="{{old('title')}}" name="title" type="text" class="form-control" id="title">
         
@@ -64,7 +63,6 @@
     </form>
 
   </div>
-</div> --}}
-   
+</div> 
 
 </x-layout>
