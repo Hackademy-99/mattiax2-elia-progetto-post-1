@@ -147,7 +147,9 @@ return [
             'max_expansion'=>50,
             'distance'=>2
         ],
-        'asYouType'
+        'asYouType'=>false,
+        'searchBoolean'=>env('TNTSEARCH_BOOLEAN',false),
+        'maxDocs'=>env('TNTSEARCH_MAX_DOCS',500),
     ],
 
 ];
