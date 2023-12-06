@@ -160,6 +160,9 @@ return [
          * Package Service Providers...
          */
         App\Providers\FortifyServiceProvider::class,
+        
+        TeamTNT\Scout\TNTSearchScoutServiceProvider::class,
+Laravel\Scout\TNTSearchScoutServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -169,6 +172,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         
+
+
     ])->toArray(),
 
     /*

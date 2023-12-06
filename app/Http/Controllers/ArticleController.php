@@ -37,15 +37,11 @@ class ArticleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    { $request->validate([
-        'title'=>'required|unique:articles|min:5',
-        'subtitle'=>'required|unique:articles|min:5',
-        'body'=>'required|min:10',
-        'img'=>'image|required',
-        'category'=>'required',
+    public function store(ArticleRequest $request)
+    { 
+    
 
-    ]);
+    
 
         Article::create([
     
