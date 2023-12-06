@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Tag;
 use App\Models\User;
 use App\Models\Category;
 use Laravel\Scout\Searchable;
@@ -29,5 +30,9 @@ class Article extends Model
             'body'=>$this->body,
             'category'=>$this->category,
         ];
+    }
+
+    public function tags(){
+        return $this->belongToMany(Tag::class);
     }
 }
