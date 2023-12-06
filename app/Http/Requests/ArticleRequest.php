@@ -22,7 +22,7 @@ class ArticleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title'=>'required|unique:articles|min:5',
+        'title'=>'required|unique:articles|min:5',
         'subtitle'=>'required|unique:articles|min:5',
         'body'=>'required|min:10',
         'img'=>'image|required',

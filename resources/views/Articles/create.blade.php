@@ -58,6 +58,12 @@
           @endforeach
         </select>
       </div>
+
+      <div class="mb-3">
+        <label for="tags" class="form-label">Tags:</label>
+        <input name="tags" id="tags" class="form-control" value="{{old('tags')}}">
+        <span class="small fst-italic">Dividi ogni tag con una virgola</span>
+      </div>
      
       <button type="submit" class="btn btn-primary">Invio</button>
     </form>
