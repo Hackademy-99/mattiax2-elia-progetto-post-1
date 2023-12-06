@@ -143,8 +143,11 @@ return [
         'storage' => storage_path(),
         'fuzziness'=> env('TNTSEARCH_FUZZINESS',true),
         'fuzzy'=>[
-            
-        ]
+            'prefix_lenght'=>2,
+            'max_expansion'=>50,
+            'distance'=>2
+        ],
+        'asYouType'
     ],
 
 ];
