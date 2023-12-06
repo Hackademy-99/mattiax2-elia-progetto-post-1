@@ -110,4 +110,11 @@ class ArticleController extends Controller
             return $article->is_accepted==true;});
          return view('Articles.by-user',compact('user','articles'));
      }
+
+     public function articleSearch(Request $request){
+        $query=$request->input('query');
+        $articles=Article::search($query)->where('is_accepted',true)->orderBy('created_at','desc')->get();
+
+        return view('Articles.search-index', compact('articles', 'query'));
+     }
 }

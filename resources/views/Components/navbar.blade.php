@@ -60,9 +60,9 @@
     <p class="profile text-black "> Benvenuto {{Auth::user()->name}}</p>
     @endauth
     
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn " type="submit"><i class="bi bi-search-heart-fill"></i></button>
+    <form class="d-flex" method="GET" action="{{route('article.search')}}">
+      <input class="form-control me-2" type="search" name="query" placeholder="Cosa stai cercando" aria-label="search">
+      <button class="btn btn-outline-info" type="submit">Cerca</button>
     </form>
     
   </div>

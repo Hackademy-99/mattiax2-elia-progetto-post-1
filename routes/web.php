@@ -72,5 +72,8 @@ Route::middleware('writer')->group(function(){
 
 });
 
+//* Rotta barra di ricerca
+Route::get('/article/search',[ArticleController::class,'articleSearch'])->name('Article.search');
+
 
 
