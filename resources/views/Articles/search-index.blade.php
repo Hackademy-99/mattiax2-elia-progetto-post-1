@@ -1,20 +1,18 @@
 <x-layout>
-<div class="container ">
-    <div class="row d-flex justify-content-around ">
-            <div class="col-12 col-md-4 d-flex justify-content-around align-items-center  my-5 flex-column">
-              <h1 class="display-2 text-center">THE AULAB POST</h1>
-              <h2 class="col-12  d-flex justify-content-around align-items-center text-center my-5 text-black titoletto">ARTICOLI RECENTI </h2>
-            </div>
-    </div>
-</div>
 
-<main class="container">
-  
-  <div class="row justify-content-between">
-    @foreach ($articles as $article)
-    <div class="col-12 col-md-5 mb-5 d-flex justify-content-center">
-      
-                  <div class="card" style="width: 21rem;">
+    <div class="container-fluid p-5  text-center text-dark">
+        <div class="row justify-content-center">
+            <h1 class="display-1">
+                Tutti gli articoli per: {{$query}}
+            </h1>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row justify-content-around">
+            @foreach ($articles as $article)
+            <div class="col-12 col-md-3 my-2">
+                <div class="card" style="width: 21rem;">
                     
                     <img src="{{Storage::url($article->img)}}" alt=""/>
                     <div class="card-body">
@@ -43,12 +41,9 @@
                         
                       </div>
                     </div>
-                  </div>
-                  @endforeach
-                </div>
-
-  </main>
-
-
+            </div>
+            @endforeach
+        </div>
+    </div>
     
 </x-layout>

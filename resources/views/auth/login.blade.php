@@ -1,22 +1,22 @@
 <x-layout>
     {{-- ! snippet errori --}}
     @if ($errors->any())
-    •	   <div class="alert alert-danger">
-    •	       <ul>
-    •	           @foreach ($errors->all() as $error)
-    •	               <li>{{ $error }}</li>
-    •	           @endforeach
-    •	       </ul>
-    •	   </div>
-    •	@endif
+      <div class="alert alert-danger">
+          <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+    @endif
 
     {{-- ** Sessione avvenuta --}}
 
     @if(session()->has('message'))
-•	    <div class="alert alert-success">
-•	        {{ session()->get('message') }}
-•	    </div>
-•	@endif
+   <div class="alert alert-success">
+       {{ session()->get('message') }}
+   </div>
+	@endif
 
     
     <form method="POST" action="{{route('login')}}"

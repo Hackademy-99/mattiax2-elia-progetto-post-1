@@ -16,7 +16,7 @@ class UserIsWriter
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::user()&&Auth::user()->is_writer) {
+        if (Auth::user()&& Auth::user()->is_writer) {
             return $next($request); 
         }
 

@@ -109,6 +109,9 @@
   <div class="row  ">
     <div class="col-12 col-md-12">
           <h1 class="text-center add-article-h1">inserisci articolo</h1>
+  <div class="row d-flex justify-content-center align-items-center mt-5">
+    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+          <h1 class="text-center">Inserisci articolo</h1>
     </div>
   </div>
 </div>
@@ -140,6 +143,12 @@
           <option value="{{$category->id}}">{{$category->name}}</option>
           @endforeach
         </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="tags" class="form-label">Tags:</label>
+        <input name="tags" id="tags" class="form-control" value="{{old('tags')}}">
+        <span class="small fst-italic">Dividi ogni tag con una virgola</span>
       </div>
      
       <button type="submit" class="btn btn-danger">Invio</button>

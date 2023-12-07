@@ -1,7 +1,9 @@
 <x-layout>
-<div class="container-fluid p-5 bg-info text-center text-white">
+
+
+<div class="container-fluid p-3 text-center text-black">
     <div class="row justify-content-center">
-        <h1 class="display-1 tesxt-capitalize">
+        <h1 class="display-4 tesxt-capitalize">
             Categoria {{$category->name}}
         </h1>
     </div>
@@ -10,22 +12,33 @@
     <div class="container my-5">
       <div class="row justify-content-around">
         @foreach ($articles as $article)
-        <div class="col-12 col-md-3 d-flex justify-contente-around align-items-center text-center my-5">
-            <div class="card" style="width: 18rem;">
-                <img src="{{Storage::url($article->img)}}" class="card-img-top img-fluid" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{$article->title}}</h5>
-                  <p class="card-text">{{$article->subtitle}}</p>
-                  <p class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</p>
+        <div class="col-12 col-md-5 mb-5 d-flex justify-content-center">
+      
+            <div class="card" style="width: 21rem;">
+              
+              <img src="{{Storage::url($article->img)}}" alt=""/>
+              <div class="card-body">
                 
-                <br>
-                    Redatto il: {{$article->created_at->format('d/m/Y')}} da <a href="{{route('Articles.byWriter',['user'=>$article->user->id])}}" class="small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center">{{$article->user->name}}</a>
-                    <a href="{{route('Articles.show',compact('article'))}}" class="btn btn-primary d-flex justify-content-around align-items-center text-center my-5">Scopri di più</a>
-                    <a href="{{route('Articles.byWriter',['user'=>$article->user->id])}}" class="small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center mt-5">{{$article->user->name}}</a>
+
+                <h2 class="card_title">{{$article->title}}</h2>
                 
+                <p>{{$article->subtitle}}</p>
+                
+                <p>Redatto il: {{$article->created_at->format('d/m/Y')}}
+                  <span>Da: <a href="{{route('Articles.byWriter',['user'=>$article->user->id])}}" class="small text-mute text-capitalize">  {{$article->user->name}}</a></span>
+                  <a href="{{route('Articles.show',compact('article'))}}" class="btn btn-dark d-flex justify-content-around align-items-center text-center my-3">Scopri di più</a>
+                  
+                  
+                  <a href="{{route('Articles.byCategory',['category'=>$article->category->id])}}" class="small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center text-white my-3">Categoria di apparteneza: {{$article->category->name}}</a><span class="card_price">
+              
+                    <p class="small fst-italic text-capitalize">
+                      @foreach ($article->tags as $tag)
+                      #{{$tag->name}}
+                      @endforeach
+                    </p>
+                </div>
               </div>
-              </div>
-        </div>
+            </div>
         @endforeach
           
       </div>
