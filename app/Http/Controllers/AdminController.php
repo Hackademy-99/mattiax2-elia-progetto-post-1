@@ -72,4 +72,11 @@ public function editCategory(Request $request, Category $category){
     
     }
 
+    public function storeCategory(Request $request){
+        Category::create(['name'=>strtolower($request->name)]);
+        
+        return redirect(route('admin.dashboard'))->with('message','Hai correttamente inserito una categoria');
+        
+        }
+
 }
