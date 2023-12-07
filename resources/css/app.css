@@ -3,7 +3,9 @@
 @import 'cards.css';
 @import 'article.css';
 @import 'byUser.css';
-
+@import 'articleshow.css';
+@import 'addArticle.css';
+@import 'index.css';
 :root {
 
     --main:#A9B4C2;
@@ -19,12 +21,14 @@
 
 body{
     background-image: url(/public/img/sfondo3.jpg);
-    background-position: center;
+    background-attachment: fixed;
+    background-position: center -104px;
     background-size:auto;
 }
 .titoletto{
     font-family: 'Playfair Display', serif;
-    text-decoration:underline
+    text-decoration:underline;
+    font-size: 26px;
 }
 .hr-title{
     width: 100px;

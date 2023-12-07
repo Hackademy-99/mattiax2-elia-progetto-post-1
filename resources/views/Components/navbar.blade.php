@@ -2,7 +2,7 @@
   <nav>
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-6 d-flex justify-content-evenly  align-items-center">
+      <div class="col-6 d-flex justify-content-evenly  align-items-center ">
         
         
         {{--! Solo per utenti autenticati --}}
@@ -12,7 +12,7 @@
         
         
         {{-- !Solo per utenti autenticati --}}
-        @auth
+        {{-- @auth
         <a class="nav-link active pe-2 fs-5 text-center" href="{{route('careers')}}">Lavora con noi!</a></li>
         @if(Auth::user()->is_admin)
         <a class="nav-link active pe-2 fs-5 text-center" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
@@ -21,7 +21,7 @@
         <a class="nav-link active pe-2 fs-5 text-center"  href="{{route('revisor.dashboard')}}">Dashboard Revisor</a></li>
         @endif
         @endauth
-      </ul>
+       --}}
       
       
       
@@ -56,7 +56,16 @@
     
     @endguest
     @auth
-    <form method="POST" action="{{route('logout')}}">@csrf <button class="btn-logout"> Logout </button> </form> 
+        <a class="nav-link active pe-2 fs-5 text-center text-white" href="{{route('careers')}}">Lavora con noi!</a></li>
+        @if(Auth::user()->is_admin)
+        <a class="nav-link active pe-2 fs-5 text-center text-white" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
+        @endif
+        @if (Auth::user()->is_revisor)
+        <a class="nav-link active pe-2 fs-5 text-center text-white"  href="{{route('revisor.dashboard')}}">Dashboard Revisor</a></li>
+        @endif
+        @endauth
+    @auth
+    <form method="POST" action="{{route('logout')}}">@csrf <button class="btn-logout text-center d-flex justify-content-center fs-5 "> Logout </button></form> 
     @endauth
 
   </ul>
@@ -64,9 +73,9 @@
 </div>
 {{-- <p class="profile text-black "> Benvenuto {{Auth::user()->name}}</p> --}}
 
-<form class="d-flex" role="search">
-  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-  <button class="btn " type="submit"><i class="bi bi-search-heart-fill"></i></button>
+<form class="d-flex align-items-center" role="search">
+  <input class="form-control me-2 " style="height: 40px "  type="search" placeholder="Search" aria-label="Search">
+  <button class="btn" type="submit"><i class="bi bi-search-heart-fill"></i></button>
 </form>
         
       </div>

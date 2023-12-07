@@ -1,0 +1,49 @@
+.add-article{
+    
+    background-color: rgb(217, 133, 133);
+    border: 0;
+    border-radius: 20px;
+    width: 400px;
+  
+   
+}
+
+.add-article-h1{
+
+    margin-bottom: 0;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-label{
+    color: black;
+    align-items: center;
+    display: flex;
+}
+
+
+.form-control{
+    
+    width: 375px;
+    background-color:#F1BD8C;
+
+}
+
+.centratino{
+
+    justify-content: center;
+    
+
+}
+
+.btn-articolo{
+     
+
+    color: white;
+    background-color: black;
+    height: 40px;
+
+}
+

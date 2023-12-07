@@ -14,7 +14,9 @@ nav{
     
     height: 80px;
     
+    background:linear-gradient(to bottom,rgb(128, 116, 116),transparent) ;
 }
+
 
 
 .profile{
@@ -40,18 +42,35 @@ nav{
 }
 
 
+.bi-house-door-fill{
+    color:#FAF7F2;
+}
+
+.bi-file-plus-fill{
+    color: #FAF7F2;
+}
+
+.bi-person-square{
+    color: #FAF7F2;
+}
+.bi-search-heart-fill{
+    color: #FAF7F2;
+    font-size: 25px;
+
+}
+
 .bi-house-door-fill:hover{
-    color: orange;
+    color:#F1BD8C;
     transition: 0.5s;
 }
 
 .bi-file-plus-fill:hover{
-    color: orange;
+    color: #F1BD8C;
     transition: 0.5s;
 }
 
 .bi-person-square:hover{
-    color: orange;
+    color: #F1BD8C;
     transition: 0.5s;
 }
 
