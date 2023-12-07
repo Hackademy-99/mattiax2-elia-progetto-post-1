@@ -27,12 +27,13 @@ class Article extends Model
         return [
             'id'=>$this->id,
             'title'=>$this->title,
+            'subtitle'=>$this->subtitle,
             'body'=>$this->body,
             'category'=>$this->category,
         ];
     }
 
     public function tags(){
-        return $this->belongToMany(Tag::class);
+        return $this->belongsToMany(Tag::class);
     }
 }

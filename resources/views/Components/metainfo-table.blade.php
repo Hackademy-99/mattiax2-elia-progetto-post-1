@@ -15,7 +15,7 @@
                 <td>{{ $metaInfo->name }}</td>
                 <td>{{ count($metaInfo->articles) }}</td>
 
-                @if (metaType == 'tags')
+                @if ($metaType == 'tags')
                     <td>
                         <form action="{{ route('admin.editTag', ['tag' => $metaInfo]) }}" method="POST">
                             @csrf

@@ -8,6 +8,7 @@ use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\ArticleRequest;
 use App\Http\Controllers\PublicController;
 
 
@@ -44,7 +45,7 @@ class ArticleController extends Controller
 
     
 
-        Article::create([
+        $article=Article::create([
     
             'title'=>$request->input('title'),
             'subtitle'=>$request->input('subtitle'),
@@ -109,7 +110,7 @@ class ArticleController extends Controller
         return view('Articles.by-category',compact('category','articles'));
     }
 
-     //! Filter by category
+     //! Filter by writer
 
      public function byWriter(User $user)
      {
@@ -117,7 +118,7 @@ class ArticleController extends Controller
             return $article->is_accepted==true;});
          return view('Articles.by-user',compact('user','articles'));
      }
-
+//! Funzione ricerca
      public function articleSearch(Request $request){
         $query=$request->input('query');
         $articles=Article::search($query)->where('is_accepted',true)->orderBy('created_at','desc')->get();

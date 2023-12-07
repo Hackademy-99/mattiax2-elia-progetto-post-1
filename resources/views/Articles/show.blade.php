@@ -47,6 +47,12 @@
               
               
               <a href="{{route('Articles.byCategory',['category'=>$article->category->id])}}" class="small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center my-3">Categoria di apparteneza: {{$article->category->name}}</a><span class="card_price">
+
+                <p class="small fst-italic text-capitalize">
+                    @foreach ($article->tags as $tag)
+                    #{{$tag->name}}
+                    @endforeach
+                  </p>
           
             </div>
           </div>
