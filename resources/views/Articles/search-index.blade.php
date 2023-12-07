@@ -21,8 +21,11 @@
                     </div>
                     <div class="card-footer text-muted d-flex justify-content-between align-items-center">
                         <a class="" href="{{route('article.byWriter',['user'->$article->user->id])}}">Redatto il{{$article->created_at->format('d/m/Y')}} da{{$article->user->name}}</a>
-                        <a href="{{route('Articles.show',compact('article'))}}" class="btn btn-info text-white">Leggi</a>
-                    </div>
+                        @if ($article->category)
+                        <a href="{{route('Articles.byCategory',['category'=>$article->category->id])}}" class="small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center my-3">Categoria di apparteneza: {{$article->category->name}}</a><span class="card_price">
+                        @else
+                        <p class="small text-muted fst-italic text-capitalize">Non Categorizzato</p>
+                        @endif                    </div>
                 </div>
             </div>
             @endforeach

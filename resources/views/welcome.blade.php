@@ -28,8 +28,12 @@
                         <span>Da: <a href="{{route('Articles.byWriter',['user'=>$article->user->id])}}" class="small text-mute text-capitalize">  {{$article->user->name}}</a></span>
                         <a href="{{route('Articles.show',compact('article'))}}" class="btn btn-dark d-flex justify-content-around align-items-center text-center my-3">Scopri di più</a>
                         
-                        
+                        @if ($article->category)
                         <a href="{{route('Articles.byCategory',['category'=>$article->category->id])}}" class="small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center my-3">Categoria di apparteneza: {{$article->category->name}}</a><span class="card_price">
+                        @else
+                        <p class="small text-muted fst-italic text-capitalize">Non Categorizzato</p>
+                        @endif
+                        
                     
                         <p class="small fst-italic text-capitalize">
                           @foreach ($article->tags as $tag)

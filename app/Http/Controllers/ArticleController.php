@@ -40,12 +40,7 @@ class ArticleController extends Controller
      */
     public function store(ArticleRequest $request)
     {
-        'title'=>'required|unique:articles|min:5',
-        'subtitle'=>'required|unique:articles|min:5',
-        'body'=>'required|min:10',
-        'img'=>'image|required',
-        'category'=>'required',
-        'tags'=>'required',
+       
 
     
 
