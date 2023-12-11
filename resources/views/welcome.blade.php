@@ -20,13 +20,13 @@
                     <div class="card-body">
                       
 
-                      <h2 class="card_title">{{$article->title}}</h2>
+                      <h2 class="card_title text-white">{{$article->title}}</h2>
                       
-                      <p>{{$article->subtitle}}</p>
+                      <p class="text-white">{{$article->subtitle}}</p>
                       
-                      <p>Redatto il: {{$article->created_at->format('d/m/Y')}}
-                        <span>Da: <a href="{{route('Articles.byWriter',['user'=>$article->user->id])}}" class="small text-mute text-capitalize">  {{$article->user->name}}</a></span>
-                        <a href="{{route('Articles.show',compact('article'))}}" class="btn btn-dark d-flex justify-content-around align-items-center text-center my-3">Scopri di più</a>
+                      <p class="text-white">Redatto il: {{$article->created_at->format('d/m/Y')}}
+                        <span>Da: <a href="{{route('Articles.byWriter',['user'=>$article->user->id])}}" class="small text-mute text-capitalize text-white">  {{$article->user->name}}</a></span>
+                        <a href="{{route('Articles.show',compact('article'))}}" class="btn btn-dark d-flex justify-content-around align-items-center text-center my-3 text-white">Scopri di più</a>
                         
                         @if ($article->category)
                         <a href="{{route('Articles.byCategory',['category'=>$article->category->id])}}" class="small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center my-3">Categoria di apparteneza: {{$article->category->name}}</a><span class="card_price">
@@ -35,7 +35,7 @@
                         @endif
                         
                     
-                        <p class="small fst-italic text-capitalize">
+                        <p class="small fst-italic text-capitalize text-white">
                           @foreach ($article->tags as $tag)
                           #{{$tag->name}}
                           @endforeach

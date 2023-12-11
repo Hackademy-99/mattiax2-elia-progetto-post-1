@@ -21,19 +21,19 @@
     <form method="POST" action="{{route('register')}}"
     >
     @csrf
-        <div class="mb-3 container ">
+        <div class="mb-3 container d-flex justify-content-center text-center align-items-center pt-5 ">
             <label for="exampleInputEmail1" class="form-label">Username</label>
           <input type="name" name="name" class="form-control" id="name" value="{{old('name')}}">
           </div>
-          <div class="mb-3 container ">
+          <div class="mb-3 container d-flex justify-content-center text-center align-items-center pt-5">
           <label for="exampleInputEmail1" class="form-label">Indirizzo mail</label>
           <input type="email" class="form-control" id="email" name="email" value="{{old('email')}}">
           </div>
-        <div class="mb-3 container">
+        <div class="mb-3 container d-flex justify-content-center text-center align-items-center pt-5">
           <label for="exampleInputPassword1" class="form-label">Password</label>
           <input type="password" class="form-control" id="exampleInputPassword1" name="password">
         </div>
-        <div class="mb-3 container">
+        <div class="mb-3 container d-flex justify-content-center text-center align-items-center pt-5">
             <label for="exampleInputPassword1" class="form-label">Conferma Password</label>
             <input type="password" class="form-control" id="exampleInputPassword1" name="password_confirmation">
           </div>

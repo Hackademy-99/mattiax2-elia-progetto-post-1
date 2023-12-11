@@ -4,9 +4,9 @@
     <p class="alert alert-info">{{ Session::get('message') }}</p>
     @endif
     
-    <div class="container-fluid p-3 text-center text-black">
+    <div class="container-fluid text-center text-black">
         <div class="row justify-content-center">
-            <h1 class="display-4 tesxt-capitalize">
+            <h1 class="display-4 text-capitalize">
                 Candidati per un ruolo
             </h1>
         </div>
@@ -15,7 +15,7 @@
     
     <div class="container">
         <div class="row mb-3">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 box ">
                 <h2>Lavora come amministratore</h2>
                 <p>Cosa farai: Ti occuperai della gestione del sito e dei suoi contenuti nella sua interezza</p>
                 <h2>Lavora come revisore</h2>
@@ -28,7 +28,7 @@
         
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 box2">
                     {{-- ! snippet errori --}}
                     @if ($errors->any())
                     <div class="alert alert-danger">
@@ -46,7 +46,7 @@
                     <form action="{{route('careers.submit')}}" method="POST">
                         @csrf
                         <div>
-                            <label for="role" class="form-label">Per quale ruolo ti stai candidando?</label>
+                            <label for="role" class="form-label text-center">Per quale ruolo ti stai candidando?</label>
                             <select name="role" id="role" class="form-control">
                                 <option 
                                 @if (Auth::user()->is_admin==true)
@@ -70,7 +70,7 @@
                             
                         </div>
                         <div>
-                            <button class="my-5">
+                            <button class="my-3 bottone">
                                 Invia la tua candidatura
                             </button>
                         </div>

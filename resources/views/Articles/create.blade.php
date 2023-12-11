@@ -40,25 +40,40 @@
   </div>
  
   
-</form>
+
     </div>
+    
+
+
+
     
     <div class="col-12 col-md-4 add-article text-center d-flex">
       <div class="mb-3 centratino">
         <label for="img" class="form-label">Immagine</label>
         <input name="img" type="file" class="form-control" id="img">
+        <div class="mb-3">
+          <label for="tags" class="form-label">Tags:</label>
+          <input name="tags" id="tags" class="form-control" value="{{old('tags')}}">
+          <span class="small fst-italic">Dividi ogni tag con una virgola</span>
+        </div>
+       
       </div>
     </div>
   </div>
-  
 </div>
 <div class="container">
   <div class="row justify-content-center text-center">
     <div class="col-12 col-md-6">
       <button type="submit" class="btn btn-articolo">Invio</button>
     </div>
+    <div style="height: 300px"></div>
   </div>
 </div>
+  
+</form>
+  
+
+
 
 
 
