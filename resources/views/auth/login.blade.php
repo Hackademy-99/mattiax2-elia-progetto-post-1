@@ -19,26 +19,35 @@
 	@endif
 
     
-    <form method="POST" action="{{route('login')}}"
-    >
+    <form method="POST" action="{{route('login')}}">
+
     @csrf
-        <div class="mb-3 container d-flex justify-content-center text-center align-items-center pt-5 ">
-            <label for="exampleInputEmail1" class="form-label">Username</label>
-          <input type="name" name="name" class="form-control" id="name">
-          </div>
-          <div class="mb-3 container d-flex justify-content-center text-center align-items-center pt-3">
-          <label for="exampleInputEmail1" class="form-label">Indirizzo mail</label>
-          <input type="email" class="form-control" id="email" name="email">
-          </div>
-        <div class="mb-3 container d-flex justify-content-center text-center align-items-center pt-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" name="password">
-        </div>
-       
-          <div class="mb-3 container d-flex justify-content-center text-center align-items-center ">
-        <button type="submit" class="btn btn-primary">Accedi</button>
-          </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="mb-3 text-center align-items-center box3">
+          <label for="exampleInputEmail1" class="form-label">Username</label>
+        <input type="name" name="name" class="form-control" id="name">
+        
+        
+        <label for="exampleInputEmail1" class="form-label">Indirizzo mail</label>
+        <input type="email" class="form-control" id="email" name="email">
+        
+      
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+      
+     
+        
+        
       </form>
+      <div class="giu">
+        <button type="submit" class="btn btn-primary ">Accedi</button>
+      </div>
+    </div>
+  
+  </div>
+  
+        
 
 
 

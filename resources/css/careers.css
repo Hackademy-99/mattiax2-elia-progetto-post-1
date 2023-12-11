@@ -15,15 +15,34 @@ p{
     width: 500px;
     border: none;
     border-radius: 20px;
+    
 
 }
 
+.giu{
 
+    height: 200px;
+
+ }
 .box2{
     background-color: rgb(217, 133, 133);
     width: 400px;
     border: none;
     border-radius: 20px;
+}
+
+.box3{
+    background-color: rgb(217, 133, 133);
+    width: 400px;
+    border: none;
+    border-radius: 20px;
+    height: 230px;
+}
+
+.form-label{
+
+    padding-top: 3px;
+
 }
 
 .bottone{
