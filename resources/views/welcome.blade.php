@@ -29,7 +29,7 @@
                         <a href="{{route('Articles.show',compact('article'))}}" class="btn btn-dark d-flex justify-content-around align-items-center text-center my-3 text-white">Scopri di più</a>
                         
                         @if ($article->category)
-                        <a href="{{route('Articles.byCategory',['category'=>$article->category->id])}}" class="small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center my-3">Categoria di apparteneza: {{$article->category->name}}</a><span class="card_price">
+                        <a href="{{route('Articles.byCategory',['category'=>$article->category->id])}}" class="small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center my-3">Categoria di appartenenza: {{$article->category->name}}</a><span class="card_price">
                         @else
                         <p class="small text-muted fst-italic text-capitalize">Non Categorizzato</p>
                         @endif
