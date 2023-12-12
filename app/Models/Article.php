@@ -30,6 +30,7 @@ class Article extends Model
             'subtitle'=>$this->subtitle,
             'body'=>$this->body,
             'category'=>$this->category,
+            
         ];
     }
 
