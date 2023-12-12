@@ -31,7 +31,7 @@
                         @else
                         <p class="small text-muted fst-italic text-capitalize">Non Categorizzato</p>
                         @endif
-                        
+                        <span class="text-white small fst-italic">Tempo di lettura {{$article->readDuration()}} min</span>
                     
                         <p class="small fst-italic text-capitalize">
                           @foreach ($article->tags as $tag)

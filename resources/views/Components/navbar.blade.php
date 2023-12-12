@@ -60,7 +60,10 @@
         <a class="nav-link active pe-2 fs-5 text-center text-white" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
         @endif
         @if (Auth::user()->is_revisor)
-        <a class="nav-link active pe-2 fs-5 text-center text-white"  href="{{route('revisor.dashboard')}}">Dashboard Revisor</a></li>
+        <a class="nav-link active pe-2 fs-5 text-center text-white"  href="{{route('revisor.dashboard')}}">Dashboard Revisore</a></li>
+        @endif
+        @if (Auth::user()->is_writer)
+        <a class="nav-link active pe-2 fs-5 text-center text-white"  href="{{route('writer.dashboard')}}">Dashboard Redattore</a></li>
         @endif
         @endauth
     @auth

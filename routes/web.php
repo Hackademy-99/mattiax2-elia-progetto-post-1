@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\WriterController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
 
@@ -27,7 +28,7 @@ Route::get('/Articles/index',[ArticleController::class,'index'])->name('Articles
 
 //** ROTTA VISTA SHOW
 
-Route::get('/Articles/show/{article}',[ArticleController::class,'show'])->name('Articles.show');
+Route::get('/Articles/{article:slug}/show',[ArticleController::class,'show'])->name('Articles.show');
 
 // * ROTTA FILTRO CATEGORIA
 
@@ -76,7 +77,10 @@ Route::middleware('revisor')->group(function(){
 Route::middleware('writer')->group(function(){
     Route::get('/article/create',[ArticleController::class,'create'])->name('Articles.create');
     Route::post('/article/store',[ArticleController::class,'store'])->name('Articles.store');
-
+    Route::get('/writer/dashboard',[WriterController::class,'dashboard'])->name('writer.dashboard');
+    Route::get('/article/{article}/edit',[ArticleController::class,'edit'])->name('Articles.edit');
+    Route::put('/article/{article}/update',[ArticleController::class,'update'])->name('Articles.update');
+    Route::delete('/article/{article}/destroy',[ArticleController::class,'destroy'])->name('Articles.destroy');
 });
 
 //* Rotta barra di ricerca

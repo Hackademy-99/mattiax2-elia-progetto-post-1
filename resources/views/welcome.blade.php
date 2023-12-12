@@ -16,7 +16,7 @@
       
                   <div class="card" style="width: 21rem;">
                     
-                    <img src="{{Storage::url($article->img)}}" alt=""/>
+                    <img src="{{Storage::url($article->img)}}" alt="">
                     <div class="card-body">
                       
 
@@ -33,6 +33,7 @@
                         @else
                         <p class="small text-muted fst-italic text-capitalize">Non Categorizzato</p>
                         @endif
+                        <span class=" text-white small fst-italic">Tempo di lettura {{$article->readDuration()}} min</span>
                         
                     
                         <p class="small fst-italic text-capitalize text-white">
