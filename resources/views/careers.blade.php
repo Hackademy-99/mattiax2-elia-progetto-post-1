@@ -23,8 +23,8 @@
                     <h2>Lavora come redattore</h2>    
                     <p>Cosa farai: Ti occuperai della scrittura degli articoli del sito</p>
                 </div>
-                <div class="col-4 box2">
-                    <div class="col-12 col-md-6 box2"> 
+                
+                    <div class="col-12 col-md-6 box"> 
                         {{-- ! snippet errori --}}
                         @if ($errors->any())
                         <div class="alert alert-danger">
@@ -37,7 +37,7 @@
                         @endif      
                     <form action="{{route('careers.submit')}}" method="POST">
                         @csrf
-                        <div class="col-5">
+                        <div class="col-5 ">
                             <label for="role" class="form-label fs-5">Per quale ruolo ti stai candidando?</label>
                             <select name="role" id="role" class="form-control ">
                                 <option 

@@ -40,9 +40,9 @@
         
         
       </form>
-      <div class="giu">
-        <button type="submit" class="btn btn-primary ">Accedi</button>
-      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary ">Accedi</button>
     </div>
   
   </div>

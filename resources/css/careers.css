@@ -25,10 +25,12 @@ p{
 
  }
 .box2{
+    margin: auto;
     background-color: rgb(217, 133, 133);
-    width: 400px;
+    width: 4px;
     border: none;
     border-radius: 20px;
+    
 }
 
 .box3{
@@ -38,6 +40,13 @@ p{
     border-radius: 20px;
     height: 230px;
 }
+
+.box4{
+    
+    padding-right: 350px;
+    
+}
+
 
 .form-label{
 
