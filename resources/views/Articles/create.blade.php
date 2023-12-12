@@ -25,7 +25,7 @@
   </div>
   
   <div class="centratino mb-3">
-  <textarea value="{{old('body')}}" name="body" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+  <textarea value="{{old('body')}}" name="body" class="form-control" placeholder="Scrivi il testo dell'articolo" id="floatingTextarea2" style="height: 100px"></textarea>
   </div>
 
   

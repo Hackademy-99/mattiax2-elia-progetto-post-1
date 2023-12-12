@@ -24,7 +24,7 @@
     @csrf
     <div class="container">
       <div class="row justify-content-center">
-        <div class="mb-3 text-center align-items-center box3">
+        <div class="col-6 col-md-12 mb-3 text-center align-items-center box3">
           <label for="exampleInputEmail1" class="form-label">Username</label>
         <input type="name" name="name" class="form-control" id="name">
         

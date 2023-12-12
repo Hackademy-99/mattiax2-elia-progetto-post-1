@@ -14,7 +14,7 @@
       
                   <div class="card" style="width: 21rem;">
                     
-                    <img src="{{Storage::url($article->img)}}" alt=""/>
+                    <img class="cardcustom" src="{{Storage::url($article->img)}}" alt=""/>
                     <div class="card-body">
                       
 

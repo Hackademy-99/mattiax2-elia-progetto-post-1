@@ -9,7 +9,7 @@
             
             <div class="col-12 col-md-12 mb-5">
       
-                <div class="card centrato" style="width: 22rem;">
+                <div class="card centrato">
                   
                   <img src="{{Storage::url($article->img)}}" alt=""/>
                   <div class="card-body">
@@ -24,7 +24,7 @@
                       <p class="text-white">{{$article->body}}</p>
                       
                       
-                      <a href="{{route('Articles.byCategory',['category'=>$article->category->id])}}" class=" small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center  text-white my-3">Categoria di apparteneza: {{$article->category->name}}</a><span class="card_price">
+                      <a href="{{route('Articles.byCategory',['category'=>$article->category->id])}}" class=" small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center  text-white my-3">Categoria di appartenenza: {{$article->category->name}}</a><span class="card_price">
         
                         <p class="small fst-italic text-capitalize text-white">
                             @foreach ($article->tags as $tag)

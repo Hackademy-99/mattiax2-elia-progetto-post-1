@@ -22,8 +22,8 @@
     >
     @csrf
     <div class="container">
-      <div class="row justify-content-center box4">
-        <div class="col-12 col-md-4">
+      <div class="row box4">
+        <div class="col-12 col-md-12">
           <div class="mb-1  pt-3">
             <label for="exampleInputEmail1" class="form-label">Username</label>
           <input type="name" name="name" class="form-control" id="name" value="{{old('name')}}">

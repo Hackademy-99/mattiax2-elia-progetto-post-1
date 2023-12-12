@@ -39,14 +39,25 @@ p{
     border: none;
     border-radius: 20px;
     height: 230px;
+    margin-top: 50px;
 }
+
 
 .box4{
-    
-    padding-right: 350px;
-    
+    margin: auto;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(217, 133, 133);
+    width: 400px;
+    border: none;
+    border-radius: 20px;
+    height: 422px;
+    margin-top: 50px;
 }
-
+.form-control{
+    width: 98%;
+}
 
 .form-label{
 
