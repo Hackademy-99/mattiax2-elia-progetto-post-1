@@ -4,18 +4,18 @@
     <p class="alert alert-info">{{ Session::get('message') }}</p>
     @endif
     
-    <div class="container-fluid p-3 text-center text-black">
+    <div class="container-fluid text-center text-black">
         <div class="row justify-content-center">
-            <h1 class="display-4 tesxt-capitalize">
+            <h1 class="display-4 text-capitalize">
                 Candidati per un ruolo
             </h1>
         </div>
     </div>
    
     
-    <div class="container">
-        <div class="row mb-3">
-            <div class="col-12 col-md-6">
+    <div class="container-fluid">
+        <div class="row mb-3 d-flex justify-content-evenly">
+            <div class="col-4 box ">
                 <h2>Lavora come amministratore</h2>
                 <p>Cosa farai: Ti occuperai della gestione del sito e dei suoi contenuti nella sua interezza</p>
                 <h2>Lavora come revisore</h2>
@@ -23,31 +23,23 @@
                     <h2>Lavora come redattore</h2>    
                     <p>Cosa farai: Ti occuperai della scrittura degli articoli del sito</p>
                 </div>
-            </div>
-        </div>
-        
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    {{-- ! snippet errori --}}
-                    @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    @endif
-
-                   
-                    
-                    
+                
+                    <div class="col-12 col-md-6 box"> 
+                        {{-- ! snippet errori --}}
+                        @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif      
                     <form action="{{route('careers.submit')}}" method="POST">
                         @csrf
-                        <div>
-                            <label for="role" class="form-label">Per quale ruolo ti stai candidando?</label>
-                            <select name="role" id="role" class="form-control">
+                        <div class="col-5 ">
+                            <label for="role" class="form-label fs-5">Per quale ruolo ti stai candidando?</label>
+                            <select name="role" id="role" class="form-control ">
                                 <option 
                                 @if (Auth::user()->is_admin==true)
                                 disabled
@@ -70,11 +62,22 @@
                             
                         </div>
                         <div>
-                            <button class="my-5">
+                            <button class="my-3 bottone">
                                 Invia la tua candidatura
                             </button>
                         </div>
                     </form>
+                    
+                </div>
+                
+            </div>
+            <div style="height: 180px"></div>
+        </div>
+        
+        
+        
+                              
+                    
                 </div>
             </div>
         </div>

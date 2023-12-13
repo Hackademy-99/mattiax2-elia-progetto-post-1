@@ -13,7 +13,7 @@ class Article extends Model
 {
     use HasFactory,Searchable;
 
-    protected $fillable = ['title','subtitle','body','img','user_id','category_id','is_accepted',];
+    protected $fillable = ['title','subtitle','body','img','user_id','category_id','is_accepted','slug'];
 
     public function user(){
         return $this->belongsTo(User::class);
@@ -30,10 +30,20 @@ class Article extends Model
             'subtitle'=>$this->subtitle,
             'body'=>$this->body,
             'category'=>$this->category,
+            
         ];
     }
 
     public function tags(){
         return $this->belongsToMany(Tag::class);
+    }
+    public function getRouteKeyName(){
+        return 'slug';
+    }
+    public function readDuration(){
+        $totalWords=str_word_count($this->body);
+        $minutesToRead=round($totalWords/200);
+        
+        return intval($minutesToRead);
     }
 }

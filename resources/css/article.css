@@ -17,3 +17,17 @@ h1{
     color: rgb(0, 0, 0);
     
 }
+
+.centrato{
+
+    display: flex;
+    align-items: center;
+   margin: auto;
+   overflow-y: auto;
+   width: 40rem;
+}
+@media screen and (max-width: 400px) {
+    .centrato{
+        width: 22rem !important;
+    }
+}

@@ -14,26 +14,26 @@
             <div class="col-12 col-md-3 my-2">
                 <div class="card" style="width: 21rem;">
                     
-                    <img src="{{Storage::url($article->img)}}" alt=""/>
+                    <img class="cardcustom" src="{{Storage::url($article->img)}}" alt=""/>
                     <div class="card-body">
                       
 
-                      <h2 class="card_title">{{$article->title}}</h2>
+                      <h2 class="card_title text-white">{{$article->title}}</h2>
                       
-                      <p>{{$article->subtitle}}</p>
+                      <p class="text-white">{{$article->subtitle}}</p>
                       
-                      <p>Redatto il: {{$article->created_at->format('d/m/Y')}}
+                      <p class="text-white">Redatto il: {{$article->created_at->format('d/m/Y')}}
                         <span>Da: <a href="{{route('Articles.byWriter',['user'=>$article->user->id])}}" class="small text-mute text-capitalize">  {{$article->user->name}}</a></span>
                         <a href="{{route('Articles.show',compact('article'))}}" class="btn btn-dark d-flex justify-content-around align-items-center text-center my-3">Scopri di più</a>
                         
                         @if ($article->category)
-                        <a href="{{route('Articles.byCategory',['category'=>$article->category->id])}}" class="small text-mute fst-italic text-capitalize d-flex justify-content-around align-items-center text-center my-3">Categoria di apparteneza: {{$article->category->name}}</a><span class="card_price">
+                        <a href="{{route('Articles.byCategory',['category'=>$article->category->id])}}" class="small text-white fst-italic text-capitalize d-flex justify-content-around align-items-center text-center my-3">Categoria di appartenenza: {{$article->category->name}}</a><span class="card_price">
                         @else
-                        <p class="small text-muted fst-italic text-capitalize">Non Categorizzato</p>
+                        <p class="small text-white fst-italic text-capitalize">Non Categorizzato</p>
                         @endif
-                        
+                        <span class="text-white small fst-italic">Tempo di lettura {{$article->readDuration()}} min</span>
                     
-                        <p class="small fst-italic text-capitalize">
+                        <p class="small fst-italic text-capitalize text-white">
                           @foreach ($article->tags as $tag)
                           #{{$tag->name}}
                           @endforeach
